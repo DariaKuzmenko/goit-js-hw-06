@@ -17,7 +17,7 @@ const createBoxes = (amount) => {
   amount = inputEl.value;
 
   for (let i = 0; i < amount; i += 1) {
-    destroyElements();
+    // destroyBoxes();
     const box = document.createElement("div");
     box.classList.add("box");
     box.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; background: ${getRandomHexColor()}`;
@@ -29,11 +29,11 @@ const createBoxes = (amount) => {
   boxesCreateEl.append(...arrayBox);
 };
 
-const destroyElements = () => {
+const destroyBoxes = () => {
   document.querySelectorAll(".box").forEach((box) => box.remove());
   inputEl.value = "";
 };
 
 buttonCreateEl.addEventListener("click", createBoxes);
 
-buttonDestroyEl.addEventListener("click", destroyElements);
+buttonDestroyEl.addEventListener("click", destroyBoxes);
