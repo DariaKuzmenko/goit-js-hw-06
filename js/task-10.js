@@ -17,7 +17,7 @@ const createBoxes = (amount) => {
   amount = inputEl.value;
 
   for (let i = 0; i < amount; i += 1) {
-    // destroyBoxes();
+    destroyBoxes();
     const box = document.createElement("div");
     box.classList.add("box");
     box.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; background: ${getRandomHexColor()}`;
